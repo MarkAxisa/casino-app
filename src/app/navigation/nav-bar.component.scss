@@ -1,0 +1,27 @@
+.nav-bar {
+	background-color: #D53600;
+	color: #fff;
+	flex: 1 1 auto;
+}
+.nav-buttons {
+	width: 100%;
+	display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-button {
+	padding: 0.2em 2em;
+	font-size: 1em;
+	border-radius: 1em;
+	margin-left: 0.5em;
+}
+
+.nav-login {
+	background: #4caf50;
+}
+
+.nav-register {
+	background: #FF8503;
+}
