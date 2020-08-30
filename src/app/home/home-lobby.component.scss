@@ -1,0 +1,21 @@
+.home-lobby-top {
+	background: #D53600;
+	padding-top: 12em;
+	z-index: 2;
+	position: relative;
+	@media screen and (max-width: 812px){
+		padding-top: 8em;
+	}
+}
+
+.home-lobby-wave {
+	background-image: url(/assets/images/wave.svg);
+	height: 5em;
+	background-repeat: no-repeat;
+	@media screen and (max-width: 812px){
+		height: 20px;
+		width: 100vw;
+		margin-top: -1px;
+	}
+
+}

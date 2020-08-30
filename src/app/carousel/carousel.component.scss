@@ -1,0 +1,102 @@
+.carousel-container {
+	position: relative;
+    overflow: hidden;
+    width: 80%;
+    padding: 4em 0;
+    margin: auto;
+	z-index: 0;
+	@media screen and (max-width: 812px){
+		overflow: scroll;
+		padding: 2em 0;
+	}
+}
+
+.carousel {
+	display: inline-flex;
+	width: calc(250px * 20 + (250px / 2));
+	text-align: center;
+	background: transparent;
+	padding: 1em 0;
+	transition: transform 300ms ease 100ms;
+	overflow-x: visible;
+	overflow-y: visible;
+	min-height: 14em;
+	@media screen and (max-width: 812px){
+		min-height: 5.5em;
+		width: 100%;
+	}
+
+	.carousel-spinner {
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		z-index: 999;
+		margin: auto;
+		top: 35%;
+	}
+}
+
+.empty-carousel {
+	background: #f1f1f1;
+	opacity: 0.4;
+}
+
+.carousel-title {
+	margin: 0.5em 0 0 2em;
+	position: absolute;
+	top: 1em;
+	z-index: 100;
+	font-size: 1.5em;
+	@media screen and (max-width: 812px){
+		margin: 0;
+	}
+}
+
+.carousel-button{
+	position: absolute;
+	top: 43%;
+	color: white;
+	font-size: 1em;
+	background: transparent;
+	border: none;
+	z-index: 999;
+	cursor: pointer;
+	outline: none;
+	@media screen and (max-width: 812px){
+		display: none;
+	}
+}
+
+.button-next {
+	right: 0;
+}
+
+.button-icon {
+	background-repeat: no-repeat;
+    display: inline-block;
+    fill: currentColor;
+    font-size: 4em;
+    width: 50px;
+}
+
+.carousel-gradient {
+    position: absolute;
+    height: 62%;
+    background: #000;
+    top: 5em;
+    opacity: 0.5;
+	width: 4em;
+	@media screen and (max-width: 812px){
+		display: none;
+	}
+}
+
+.gradient-right {
+	right: 0;
+}
+
+.gradient-left {
+	left: 0;
+}

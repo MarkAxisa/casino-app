@@ -2,13 +2,34 @@
 	background-color: #D53600;
 	color: #fff;
 	flex: 1 1 auto;
+	padding: 2em;
+	@media screen and (max-width: 812px){
+		width: 100vw;
+		padding: 0;
+	}
 }
+
+.nav-bar-title {
+	@media screen and (max-width: 812px){
+		padding: 0.7em;
+	}
+}
+
+.nav-bar-container {
+	position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
 .nav-buttons {
 	width: 100%;
 	display: flex;
-    flex-flow: row;
-    align-items: center;
-    justify-content: flex-end;
+	flex-flow: row;
+	align-items: center;
+	justify-content: flex-end;
+	@media screen and (max-width: 812px){
+		display: none;
+	}
 }
 
 .nav-button {

@@ -1,0 +1,13 @@
+<div class="nav-bar">
+	<div class="nav-container">
+		<ul class="nav-wrapper">
+			<button class="nav-search-button" (click)="handleToggleSearch()">
+				<mat-icon class="nav-search-icon">search</mat-icon>
+			</button>
+			<li *ngFor="let category of categories" class="nav-category">
+				<a routerLink="{{category.parent}}/{{category.endpointFragement}}"
+					class="nav-item">{{category.title}}</a>
+			</li>
+		</ul>
+	</div>
+</div>

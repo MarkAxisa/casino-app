@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
 	selector: 'nav-bar',
@@ -9,7 +9,13 @@ export class NavBarComponent implements OnInit {
 
 	constructor() { }
 
+	@Output() toggleSearch = new EventEmitter<boolean>();
+
+
 	ngOnInit(): void {
 	}
 
+	handleToggleSearch(searchOpen: boolean) {
+		this.toggleSearch.emit(searchOpen)
+	}
 }

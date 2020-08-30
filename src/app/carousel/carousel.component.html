@@ -1,0 +1,23 @@
+<div #carouselContainer class=carousel-container>
+	<p class="carousel-title">title</p>
+	<div #carousel class=carousel [ngClass]="{'empty-carousel': !gameCollection}">
+		<mat-spinner *ngIf="!gameCollection" class="carousel-spinner"></mat-spinner>
+		<div *ngFor="let game of gameCollection">
+			<carousel-item [game]="game" #element></carousel-item>
+		</div>
+	</div>
+	<div *ngIf="hasPrev && gameCollection" class="previous-button-container">
+		<div class="carousel-gradient gradient-left"></div>
+		<button (click)="handlePrev()" class="carousel-button button-prev">
+			<mat-icon class="button-icon">navigate_before</mat-icon>
+		</button>
+	</div>
+	<div *ngIf="hasNext && gameCollection" class="next-button-container">
+		<div class="carousel-gradient gradient-right"></div>
+		<button (click)="handleNext()" class="carousel-button button-next">
+			<mat-icon class="button-icon">navigate_next</mat-icon>
+		</button>
+	</div>
+
+
+</div>

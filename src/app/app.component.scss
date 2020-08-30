@@ -1,0 +1,13 @@
+.nav-wave {
+	background-image: url(/assets/images/wave.svg);
+	height: 5em;
+	background-repeat: no-repeat;
+	margin-top: 12em;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+	@media screen and (max-width: 812px){
+		width: 100vw;
+		margin-top: 9em;
+	}
+}

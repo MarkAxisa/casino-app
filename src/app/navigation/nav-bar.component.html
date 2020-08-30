@@ -1,8 +1,10 @@
-<mat-toolbar class="nav-bar">
-	<span>My Application</span>
-	<div class="nav-buttons">
-		<button mat-button class="nav-login nav-button">Login</button>
-		<button mat-button class="nav-register nav-button">Register</button>
-	</div>
-
-</mat-toolbar>
+<div class="nav-bar-container">
+	<mat-toolbar class="nav-bar">
+		<span class="nav-bar-title">Casino</span>
+		<div class="nav-buttons">
+			<button mat-button class="nav-login nav-button">Login</button>
+			<button mat-button class="nav-register nav-button">Register</button>
+		</div>
+	</mat-toolbar>
+	<nav-main (toggleSearch)="handleToggleSearch($event)"></nav-main>
+</div>

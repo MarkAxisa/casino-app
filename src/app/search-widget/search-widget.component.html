@@ -1,0 +1,7 @@
+<div class="search-container" [ngClass]="{'search-open': isSearchOpen}">
+	<div class="search-overlay"></div>
+	<button (click)="closeSearch()" class="close-search-button">
+		<mat-icon class="button-icon">close</mat-icon>
+	</button>
+	<input matInput class="search-input" spellcheck="false" autocomplete="off" placeholder="Search Games" #searchInput>
+</div>
