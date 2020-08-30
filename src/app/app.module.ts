@@ -9,11 +9,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchModule } from './search-widget/search.module';
-
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
+		FooterComponent,
 	],
 	imports: [
 		BrowserModule,

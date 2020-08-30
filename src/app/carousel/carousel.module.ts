@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { CarouselItemComponent } from './carousel-item/carousel-item.component';
 import { CarouselComponent } from './carousel.component';
@@ -16,10 +17,12 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 		CommonModule,
 		HttpClientModule,
 		MatIconModule,
-		MatProgressSpinnerModule
+		MatProgressSpinnerModule,
+		RouterModule
 	],
 	exports: [
-		CarouselComponent
+		CarouselComponent,
+		CarouselItemComponent
 	],
 	providers: [],
 	bootstrap: [

@@ -1,5 +1,10 @@
-<div class="game-container">
-	<div class="overlay"></div>
-	<img class="carousel-image" src={{game.thumbnail}} onerror="this.src='./assets/images/defaultThumbnail.jpg';"
-		alt="{{game.name}}" />
+<div [ngClass]="{'carousel-item': isCarouselItem ,'lobby-item': !isCarouselItem }">
+	<a (click)="toggleSearchOpen()" routerLink="/play/" [queryParams]="{game:game.id}">
+		<div class="overlay">
+			<p class="game-title">{{game.name}}</p>
+			<mat-icon class="play-icon">play_arrow</mat-icon>
+		</div>
+		<img class="game-image" src={{game.thumbnail}} onerror="this.src='./assets/images/defaultThumbnail.jpg';"
+			alt="{{game.name}}" />
+	</a>
 </div>

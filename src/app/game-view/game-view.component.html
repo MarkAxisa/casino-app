@@ -1,0 +1,7 @@
+<div class="game-view-container">
+	<h3 class="game-title">{{currentGame?.name}}</h3>
+	<div class="game-container">
+		<img *ngIf="currentGame" class="game-placeholder" src="./assets/images/rickroll.gif">
+		<mat-spinner *ngIf="!currentGame" [diameter]="60" class="game-spinner"></mat-spinner>
+	</div>
+</div>

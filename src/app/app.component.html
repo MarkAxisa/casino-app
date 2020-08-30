@@ -1,4 +1,7 @@
-<nav-bar (toggleSearch)="handleToggleSearch($event)"></nav-bar>
-<div class="nav-wave"></div>
-<search-widget [isSearchOpen]="isSearchOpen" (toggleSearch)="handleToggleSearch($event)"></search-widget>
-<router-outlet></router-outlet>
+<div class="app-container">
+	<nav-bar (toggleSearch)="handleToggleSearch($event)"></nav-bar>
+	<div class="nav-wave"></div>
+	<search-widget [isSearchOpen]="isSearchOpen" (toggleSearch)="handleToggleSearch($event)"></search-widget>
+	<router-outlet></router-outlet>
+	<footer></footer>
+</div>

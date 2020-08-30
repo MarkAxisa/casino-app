@@ -29,10 +29,17 @@
 	cursor: pointer;
 	z-index: 1100;
 	padding: 1.5em;
+	@media screen and (max-width: 812px){
+		padding: 0.7em 1em;
+	}
 
 	.button-icon {
 		font-size: 4em;
 		width: 80px;
+		@media screen and (max-width: 812px){
+			font-size: 3em;
+			width: 35px;
+		}
 	}
 }
 
@@ -48,5 +55,35 @@
 	color: #fff;
 	@media screen and (max-width: 812px){
 		font-size: 2em;
+		width: 70%;
+	}
+}
+
+.search-spinner {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	margin-top: 20%;
+}
+
+.result-container {
+	position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 95vh;
+    margin-right: -2em;
+	margin-top: 7em;
+	@media screen and (max-width: 812px){
+		margin-right: 0;
+		margin-top: 4em;
+	}
+
+	casino-lobby {
+		.casino-lobby {
+			padding: 0 !important;
+		}
 	}
 }

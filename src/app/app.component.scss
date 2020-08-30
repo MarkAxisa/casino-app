@@ -9,5 +9,13 @@
 	@media screen and (max-width: 812px){
 		width: 100vw;
 		margin-top: 9em;
+		margin-top: 8.15em;
+	}
+}
+
+.app-container {
+	@media screen and (max-width: 812px){
+		overflow-x: hidden;
+		position: relative;
 	}
 }

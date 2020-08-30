@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ViewChild, ElementRef } from "@angular/core";
 import { GamesService } from "./games.service";
-import { filter, tap, take, publishReplay, refCount } from "rxjs/operators";
+import { filter, tap, take } from "rxjs/operators";
 
 @Component({
 	selector: "carousel",
@@ -15,6 +15,7 @@ export class CarouselComponent implements OnInit {
 	@ViewChild("carouselContainer", { static: false }) carouselContainer: ElementRef;
 	@ViewChild("element", { static: false }) element: ElementRef;
 	@Input() category: string;
+	@Input() title: string;
 
 	gameCollection: any;
 	containerWidth: number;
@@ -26,15 +27,13 @@ export class CarouselComponent implements OnInit {
 	hasNext = true;
 
 	ngOnInit(): void {
-		this.gameService.GetGamesByCategory(this.category).pipe(
+		this.gameService.fetchGamesByCategory(this.category).pipe(
 			filter(games => !!games),
 			take(1),
 			tap((games) => {
 				// Shuffling collection in order to get different games everytime
 				this.gameCollection = games.sort(() => Math.random() - 0.5).slice(0, 20);
-			}),
-			publishReplay(1),
-			refCount()
+			})
 		).subscribe();
 	}
 

@@ -3,5 +3,11 @@
 	<button (click)="closeSearch()" class="close-search-button">
 		<mat-icon class="button-icon">close</mat-icon>
 	</button>
-	<input matInput class="search-input" spellcheck="false" autocomplete="off" placeholder="Search Games" #searchInput>
+	<input matInput class="search-input" (keyup.enter)="handleSearch($event)" spellcheck="false" autocomplete="off"
+		placeholder="Search Games" [attr.disabled]="isSearching ? true : null" #searchInput>
+	<mat-spinner [diameter]="60" *ngIf="isSearching" class="search-spinner"></mat-spinner>
+	<div class="result-container">
+		<casino-lobby (toggleSearch)="closeSearch()" *ngIf="searchResults.length" [hasRoute]="false"
+			[gamesCollection]="searchResults"></casino-lobby>
+	</div>
 </div>

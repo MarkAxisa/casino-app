@@ -1,18 +1,30 @@
 
-.game-container {
+.lobby-item {
+	width: 250px;
+	padding-right: 2px;
+	position: relative;
+
+	cursor: pointer;
+		@media screen and (max-width: 812px){
+		width: 100%;
+	}
+}
+
+.carousel-item {
 	min-width: 250px;
+	height: 235px;
 	padding-right: 2px;
 	transition: all 500ms ease-out;
-	transform: scale(1);
-	display: inline-block;
+	position: relative;
 	cursor: pointer;
 
 	@media screen and (max-width: 812px){
 		min-width: 120px;
+		height: 113px;
 	}
 }
 
-.game-container:hover {
+.carousel-item:hover {
 	margin: 0 calc(250px * 0.25);
 	transform: scale(1.5);
 	@media screen and (max-width: 812px){
@@ -21,9 +33,44 @@
 	}
 }
 
-.carousel-image {
-	width: 250px;
+.game-image {
+	width: 100%;
+}
+
+.overlay {
+	width: 100%;
+	position: absolute;
+	height: 100%;
+	background: #000;
+	transition: all 300ms ease-out;
+	opacity: 0;
+
+	.game-title {
+		color: #fff;
+		position: relative;
+		font-size: 1.5em;
+		padding: 0.5em;
+		text-align: left;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		width: 90%;
+		overflow: hidden;
+	}
+
+	.play-icon {
+		color: #fff;
+		position: relative;
+		font-size: 7.5em;
+		width: 100%;
+		text-align: center;
+		top: 0.1em;
+	}
+}
+
+.overlay:hover {
+	transition: all 300ms ease-out;
+	opacity: 0.8;
 	@media screen and (max-width: 812px){
-		width: 120px;
+		opacity: 0;
 	}
 }

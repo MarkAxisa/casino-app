@@ -1,0 +1,45 @@
+.casino-lobby {
+	display: block;
+	width: 100%;
+	margin-left: 4em;
+	min-height: 75em;
+	@media screen and (max-width: 812px){
+		position: relative;
+		margin: 0;
+		min-height: 40em;
+	}
+}
+
+.page-lobby {
+	padding-top: 18em;
+	@media screen and (max-width: 812px){
+		padding-top: 11em;
+	}
+}
+
+.lobby-title {
+	color: #FF8503;
+	font-size: 2em;
+	font-weight: bold;
+	@media screen and (max-width: 812px){
+		font-size: 1.5em;
+		margin-left: 0.3em;
+	}
+}
+
+.lobby-spinner {
+	width: 60px;
+	height: 60px;
+	left: 0;
+	right: 0;
+	position: absolute;
+	margin: auto;
+	top: 50%;
+}
+
+.casino-item {
+	display: inline-block;
+	@media screen and (max-width: 812px){
+		width: 50%;
+	}
+}

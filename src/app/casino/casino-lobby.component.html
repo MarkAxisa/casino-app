@@ -1,2 +1,7 @@
-<p>casino works!</p>
-<p>{{currentRoute}}</p>
+<div class="casino-lobby" [ngClass]="{'page-lobby': hasRoute }">
+	<h3 class="lobby-title">{{lobbyTitle | titlecase}}</h3>
+	<mat-spinner *ngIf="!gamesCollection.length" [diameter]="60" class="lobby-spinner"></mat-spinner>
+	<div class="casino-item" *ngFor="let game of gamesCollection">
+		<carousel-item (toggleSearch)="toggleSearchOpen()" [game]="game" [isCarouselItem]="false"></carousel-item>
+	</div>
+</div>
